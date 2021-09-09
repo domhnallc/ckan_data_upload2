@@ -5,7 +5,7 @@ setup(
     version='1.0',
     packages=[''],
     url='',
-    license='',
+    license='license',
     author='domhnall carlin',
     author_email='',
     description=''
