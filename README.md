@@ -12,7 +12,7 @@ A python module to allow data upload to an existing package in a CKAN implementa
 
 
 # Usage
-ckan_upload.py -p <package_id> -d <description> -u <url> -f <file>
+`ckan_upload.py -p <package_id> -d <description> -u <url> -f <file>`
 
 This code allows upload of a resource (i.e. a file) to a CKAN package (a folder of resources).  There must be an existing package in the CKAN setting or this will fail.
 
