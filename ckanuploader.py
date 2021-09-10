@@ -12,7 +12,7 @@ def get_opts():
     argv = sys.argv[1:]
     try:
         # Define the getopt parameters
-        opts, args = getopt.getopt(argv, 'p:d:u:f:', ['package_id', 'description', 'url', 'file'])
+        opts, args = getopt.getopt(argv, 'p:n:d:u:f:', ['package_id', 'name','description', 'url', 'file'])
         # Check if the options' length is 4 (can be enhanced)
         if len(opts) != 4:
             print('usage: ckan_upload.py -p <package_id> -d <description> -u <url> -f <file>')
@@ -21,19 +21,21 @@ def get_opts():
             for opt, arg in opts:
                 print(opt, arg)
             pid = opts[0][1]
-            desc = opts[1][1]
-            url = opts[2][1]
-            file = opts[3][1]
+            name = opts[1][1]
+            desc = opts[2][1]
+            url = opts[3][1]
+            file = opts[4][1]
             # print(pid)
-            upload_file(pid, desc, url, file)
+            upload_file(pid, name, desc, url, file)
     except getopt.GetoptError:
         # Print something useful
-        print('usage: add.py -a <first_operand> -b <second_operand>')
+        print('usage: ckan_upload.py -p <package_id> -d <description> -u <url> -f <file>')
         sys.exit(2)
 
 
-def upload_file(package_id, description, url, file_to_upload):
+def upload_file(package_id, name, description, url, file_to_upload):
     ckan.action.resource_create(package_id=package_id,
+                                name=name,
                                 description=description,
                                 url=url,
                                 upload=open(file_to_upload))
