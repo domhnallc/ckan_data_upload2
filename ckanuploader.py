@@ -14,8 +14,8 @@ def get_opts():
         # Define the getopt parameters
         opts, args = getopt.getopt(argv, 'p:n:d:u:f:', ['package_id', 'name','description', 'url', 'file'])
         # Check if the options' length is 4 (can be enhanced)
-        if len(opts) != 4:
-            print('usage: ckan_upload.py -p <package_id> -d <description> -u <url> -f <file>')
+        if len(opts) != 5:
+            print('usage: ckan_upload.py -p <package_id> -n <name> -d <description> -u <url> -f <file>')
         else:
             # Iterate the options and get the corresponding values
             for opt, arg in opts:
@@ -29,7 +29,7 @@ def get_opts():
             upload_file(pid, name, desc, url, file)
     except getopt.GetoptError:
         # Print something useful
-        print('usage: ckan_upload.py -p <package_id> -d <description> -u <url> -f <file>')
+        print('usage: ckan_upload.py -p <package_id> -n <name> -d <description> -u <url> -f <file>')
         sys.exit(2)
 
 
