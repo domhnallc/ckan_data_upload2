@@ -22,5 +22,5 @@ File must be a full path to an existing file.
 
 # Example
 
-python3 ckanupload3.py -p YOUR-PACKAGE-ID-GOES-HERE -d 'A sample dataset' -u /a/fake/url -f  /local/path/to/dataset.csv
+`python3 ckanupload3.py -p YOUR-PACKAGE-ID-GOES-HERE -d 'A sample dataset' -u /a/fake/url -f  /local/path/to/dataset.csv`
 
