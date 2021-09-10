@@ -18,6 +18,7 @@ A python module to allow data upload to an existing package in a CKAN implementa
 - Description and url can be blank.
 - If any string contains whitespace, it must be wrapped in quotation marks.
 - File must be a full path to an existing file.
+- If name is left out, the resource will be named by the description.
 
 
 # Example
