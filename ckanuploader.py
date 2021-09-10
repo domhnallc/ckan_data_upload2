@@ -35,7 +35,7 @@ def get_opts():
 
 def upload_file(package_id, name, description, url, file_to_upload):
     ckan.action.resource_create(package_id=package_id,
-                                name=name,
+                                name=name, # added
                                 description=description,
                                 url=url,
                                 upload=open(file_to_upload))
