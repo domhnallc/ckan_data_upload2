@@ -26,7 +26,7 @@ def get_opts():
             url = opts[3][1]
             file = opts[4][1]
             # print(pid)
-            upload_file(pid, name, desc, url, file)
+            return pid, name, desc, url, file
     except getopt.GetoptError:
         # Print something useful
         print('usage: ckan_upload.py -p <package_id> -n <name> -d <description> -u <url> -f <file>')
@@ -42,7 +42,7 @@ def upload_file(package_id, name, description, url, file_to_upload):
 
 
 def main():
-    get_opts()
-
+    pid, name, desc, url, file = get_opts()
+    upload_file(pid, name, desc, url, file)
 
 main()
